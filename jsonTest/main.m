@@ -69,9 +69,10 @@ int main(int argc, const char * argv[]) {
     }
         
         for (int i = 0; i < [personArray count]; i++) {
-            NSLog(@"Name : %@", [[personArray objectAtIndex:i ]valueForKey:@"name"] );
-            NSLog(@"Age : %@", [[personArray objectAtIndex:i ]valueForKey:@"age"] );
-            NSLog(@"About : %@ ", [[personArray objectAtIndex:i ]valueForKey:@"about"] );
+            Person *person= [personArray objectAtIndex:i];
+            NSLog(@"Name : %@", person.name );
+            NSLog(@"Age : %lg", person.age);
+            NSLog(@"About : %@",person.about);
             NSLog(@"\n");
 
             
