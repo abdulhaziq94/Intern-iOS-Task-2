@@ -53,18 +53,39 @@ int main(int argc, const char * argv[]) {
             
             [personArray addObject:person];
             
-            for (int i = 0; i < [personArray count]; i=3){
-
-               
-                NSLog(@"name :%@", [person name]);
-                NSLog(@"age : %lg", [person age]);
-            }
+//            for (int i = 0; i < [personArray count]; i=2){
+//
+//               
+//                NSLog(@"name : %@", [person name]);
+//                NSLog(@"age : %lg", [person age]);
+//                NSLog(@"about :%@\n" , [person about]);
+//                NSLog(@"\n");
+//            }
         
         
-        NSLog(@"personArray: %@", personArray);
+//        NSLog(@"personArray: %@", personArray);
         
         
     }
+        
+        for (int i = 0; i < [personArray count]; i++) {
+            NSLog(@"Name : %@", [[personArray objectAtIndex:i ]valueForKey:@"name"] );
+            NSLog(@"Age : %@", [[personArray objectAtIndex:i ]valueForKey:@"age"] );
+            NSLog(@"About : %@ ", [[personArray objectAtIndex:i ]valueForKey:@"about"] );
+            NSLog(@"\n");
+
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     return 0;
 }
 }
